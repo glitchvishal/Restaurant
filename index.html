@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Coffee</title>
+</head>
+<body onload="init()">  
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Coffee Order</h1>
+                <p class="lead">Select and order you favourite coffee</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <select id="coffee" class="form-select" aria-label="Coffee Type">
+                    <option value="none" selected disabled>Coffee Type</option>
+                  </select>                  
+            </div>
+            <div class="col-4">
+                <select id="addon" class="form-select" aria-label="Add On">
+                    <option value="none" selected disabled>Add On</option>
+                  </select>                  
+            </div>
+            <div class="col-4">
+                <div class="btn-group" role="group" aria-label="Counter">
+                    <button onclick="change('sub')" type="button" class="btn btn-danger">-</button>
+                    <button id="quantity" type="button" class="btn btn-default disabled">0</button>
+                    <button onclick="change('add')" type="button" class="btn btn-success">+</button>
+                  </div>
+                <button onclick="addItem()" class="btn btn-info" type="button">Add Item</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Unit</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
